@@ -49,7 +49,82 @@ print(a > b)
 # True
 ```
 
+## 논리연산자
 
+논리연산자는 연산 결과에 따라 참인지 거짓인지를 판단한다.
+
+![IMG_EC295522DCA9-1](https://github.com/hampak/python-study/assets/85291626/3f8fbf09-1a3c-4e8e-8839-a8428389d011)
+
+논리연산자 또한 **True** 혹은 **False**를 리턴한다.
+
+### and
+
+`and`연산자는 조건 모두가 참이어야 True를 반환한다.
+
+
+### or
+
+`or`연산자는 조건 중 하나만이라도 참이면 True를 반환한다.
+
+
+### not
+
+`not`연산자는 (예를 들어) a가 거짓이면 True를 반환하고 a가 참이면 False를 반환한다.
+
+
+```py
+a = 100
+b = 200
+
+print(a < b and a == 110)
+# False
+
+print(a < b or a == 110)
+# True
+
+print(not a) # 정수형 숫자는 True 값이다
+# False
+```
+
+## 간단한 연습
+
+> 각 과목 점수는 다음과 같다. 각 과목 모두 80점이 이상인지 판별하여 논리 연산자를 사용하여 출력하시오.
+
+`kor = 90 // eng = 80 // math = 100`
+
+```py
+kor = 80
+eng = 90
+math = 100
+
+result = (kor >= 80) and (eng >= 80) and (math >= 80)
+
+print(result)
+# True
+```
+
+---
+
+## 삼항연산자
+
+자바스크립트의 ternary operator와 비슷하다. 복잡한 if ~ else 조건문을 삼항 연산자로 사용하게 되면 코드를 더욱 간결하고 빠르게 작성할 수 있다.
+
+![IMG_7FB20086FD95-1](https://github.com/hampak/python-study/assets/85291626/ad302bd0-5ea5-4a8a-ae73-b9e471f75d01)
+
+
+간단한 연습을 해보자:
+
+```py
+num1 = 125
+num2 = 100
+num3 = 120
+
+max = num1 if num1 > num2 else num2
+max = num3 if num3 > max else max
+
+print(max)
+# 125
+```
 
 
 
