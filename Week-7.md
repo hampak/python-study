@@ -120,26 +120,118 @@ for i in range(5, 0, -1):
 
 ---
 
+## while 반복문
 
+> while 반복문은 조건식이 **참**인 경우 동안 명령을 반복 수행한다. 참인 경우 실행하는 명령이 끝나는 곳에서 다시 조건식으로 돌아와 반복하는 형식을 취하므로 **무한**반복이 가능하다.
 
+```py
+while 조건식:
+  처리할 반복 문장
+```
 
+**초기값을 0으로 설정할지 1로 설정할지 차이가 있는데 한 번 알아보자:**
 
+### 초기값을 "0"으로 설정하는 경우
 
+아래 코드부터 보자:
 
+```py
+count = 0
+while count < 5: # 중요
+  count += 1 # 중요
+  print(count)
 
+# 1
+# 2
+# 3
+# 4
+# 5
+```
 
+`print()`를 하기 **전**에 카운트 값을 increment 하는 것이 중요하다! 또한, **`count < 5`**이어야 한다.
 
+### 초기값을 "1"로 설정하는 경우
 
+```py
+count = 1
+while count <= 5: # 중요
+  print(count)
+  count += 1 # 중요
 
+# 1
+# 2
+# 3
+# 4
+# 5
+```
 
+`print()`를 한 **후**에 카운트 값을 increment 하는 것이 중요하다! 또한, **`count <= 5`**이어야 한다.
 
+### while 문으로 무한반복
 
+while문의 조건식이 참인 이상 계속 실행되기 때문에 무한 반복을 실행할 수 있다.
 
+```py
+while True:
+  print("I love javascript")
+```
 
+여기서 `if ~~~: break`를 사용하면 루프에서 빠져 나온다.
 
+## 간단한 연습
 
+> while 반복문을 이용하여 "Python Program"을 5번 출력하고 그 옆에 출력 횟수도 함께 출력되도록 프로그램을 작성하시오.
 
+```py
+prg = "Python Program "
 
+i = 0 # 초기값
 
+while i < 5:
+  i += 1
+  print(prg + str(i) + "번 출력") # str(i)를 해주지 않으면 숫자를 문자열과 합칠 수 없기 때문에 에러가 난다.
 
+# Python Program 1번 출력
+# Python Program 2번 출력
+# Python Program 3번 출력
+# Python Program 4번 출력
+# Python Program 5번 출력
+```
 
+> 사용자로부터 구구단 1개를 입력받아 while 반복문을 이용하여 구구단을 출력하는 프로그램을 작성하시오.
+
+```py
+num = int(input("원하는 구구단: "))
+
+i = 1
+
+while i < 10:
+  print(f"{num} * {i} = {num * i}")
+  i += 1
+
+# 원하는 구구단: 5
+# 5 * 1 = 5
+# 5 * 2 = 10
+# 5 * 3 = 15
+# 5 * 4 = 20
+# 5 * 5 = 25
+# 5 * 6 = 30
+# 5 * 7 = 35
+# 5 * 8 = 40
+# 5 * 9 = 45
+```
+
+> animal=["dog","duck","pony","donkey","giraffe","elephant","cat"]가 기억되어 있다. 문자열이 5글자 이내인 동물만 출력하는 프로그램을 작성하시오.
+
+```py
+animal =["dog","duck","pony","donkey","giraffe", "elephant","cat"]
+
+for i in animal:
+  if(len(i) < 5):
+    print(i)
+
+# dog
+# duck
+# pony
+# cat
+```
