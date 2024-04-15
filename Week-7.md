@@ -226,7 +226,7 @@ while i < 10:
 ```py
 animal =["dog","duck","pony","donkey","giraffe", "elephant","cat"]
 
-for i in animal:
+for i in animal: # 참고로 print(i) 하면 리스트 내 각각의 값을 리턴한다 (꽤 유용)
   if(len(i) < 5):
     print(i)
 
