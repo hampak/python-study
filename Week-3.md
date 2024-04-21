@@ -89,7 +89,7 @@ f-string format은 문자열을 아주 간결하게 출력할 때 사용하기 �
 
 ```py
 name = "John"
-age = 25 # 여기서 "age" 변수는 문자열이다
+age = 25
 print(f"My name is {name} and I'm {age} years old.")
 # My name is John and I'm 25 years old.
 ```
@@ -104,7 +104,7 @@ print(f"My name is {name} and I'm {age} years old.")
 
 ```py
 name = input("What's your name: ")
-age = input("How old are you: ")
+age = input("How old are you: ") # 여기서 "age" 변수는 문자열이다
 print("Your name is", name, "and you are", age, "years old")
 
 # What's your name: John
