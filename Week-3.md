@@ -143,6 +143,7 @@ print(f"Hello, {name}. You were born in the year {year}, of {month} {day}.")
 ```
 
 - `.split()`함수 안에 아무 내용을 입력하지 않고 비워둔다면 **공백으로 데이터를 처리하겠다는 의미이다**.
+- **만약, 예를 들어 `,`로 데이터를 구분하여 받고 싶다면 `.split(",")`로 하면 된다.**
 
 ### 간단한 연습
 
