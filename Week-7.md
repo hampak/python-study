@@ -70,7 +70,7 @@ for i in range (1, 11, 1):
 
 print(f"1 ~ 10까지 자연수의 합: {sum}")
 print("1 ~ 10까지 자연수의 합: %d" %sum)
-print("1 ~ 10까지 자연수의 합: {sum}".format(sum))
+print("1 ~ 10까지 자연수의 합: {0}".format(sum))
 
 # 1 ~ 10까지 자연수의 합: 55
 # 1 ~ 10까지 자연수의 합: 55
