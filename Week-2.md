@@ -32,7 +32,7 @@ print("10 + 10 =", 10 + 10)
 print("python"+"program")
 # pythonprogram
 
-print("python", "program")
+print("python","program")
 # python program
 ```
 
