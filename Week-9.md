@@ -235,7 +235,7 @@ while True:
 
 ## continue 문
 
-반복문에서 `continue`문을 만나게 되면 반복문 루프 구간의 흐름을 유지한 상태에서 코드의 실행 부분만 건너뛰는 역할을 수행한다.
+반복문에서 `continue`문을 만나게 되면 반복문 루프 구간의 흐름을 유지한 상태에서 코드의 실행 부분만 **건너뛰는** 역할을 수행한다.
 
 ```py
 while 조건식:
@@ -244,12 +244,77 @@ while 조건식:
     continue
 ```
 
+> while 반복문과 continue 문을 이용하여 홀수만 출력하라.
 
+```py
+i = 0
+while i < 10:
+  i += 1
+  if(i % 2 == 0):
+    continue
+  print(i)
 
+# 1
+# 3
+# 5
+# 7
+# 9
+```
 
+> while 반복문과 continue 문을 이용하여 특정한 문자열 "_"을 만났을 때 건너뛰는 프로그램을 작성하시오.
 
+```py
+str = input("문자열을 입력하시오: ")
 
+for i in str:
+  if (i == "_"):
+    print(end= " ")
+    continue
+  print(i, end = "")
 
+# 문자열을 입력하시오: I_Love_Javascript
+# I Love Javascript
+```
 
+> 사용자로부터 어떤 숫자를 5개 입력받아 양의 정수에 대해서만 합계를 계산하여 출력하는 프로그램을 작성하시오.
 
+```py
+sum = 0
+for i in range(5):
+  num = int(input("정수를 입력하시오: "))
+  if num < 0:
+    continue
+  sum = sum + num
+print(f"양의 정수 합계: {sum}")
 
+# 정수를 입력하시오: 15
+# 정수를 입력하시오: -3
+# 정수를 입력하시오: 20
+# 정수를 입력하시오: -20
+# 정수를 입력하시오: 15
+# 양의 정수 합계: 50
+```
+
+> 사용자로부터 어떤 정수 5개를 입력받아 입력한 숫자의 합계를 출력하는 프로그램을 작성하시오. 단, 숫자가 3인 경우는 출력되지 않고 함계에서 제외되도록 한다.
+
+```py
+sum = 0
+
+for i in range(5):
+  num = int(input("숫자: "))
+  if (num == 3):
+    continue
+  print(num)
+  sum = sum + num 
+print(f"합계: {sum}")
+
+# 숫자: 4
+# 4
+# 숫자: 2
+# 2
+# 숫자: 3
+# 숫자: 6
+# 6
+# 숫자: 3
+# 합계: 12
+```
