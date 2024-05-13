@@ -159,13 +159,101 @@ print(f"합계 = {sum}")
 
 ## 다중 리스트
 
+### sorted() 함수
 
+리스트에서 다루었던 `sort()` 정렬 함수로는 튜플에서는 사용이 불가능하지만 `sorted()`함수 사용은 **튜플에서도 가능하다**.
 
+`sorted()`함수의 가장 큰 특징은 리스트나 튜플에서 항목을 오름차순과 내림차순으로 선택하여 정렬할 수 있다.
 
+`새로운 리스트 변수 = sorted(리스트 변수, reverse = True)`
 
+다음 코드를 살펴보자:
 
+```py
+num = [12, 15, 8, 4, 9]
+newNum = sorted(num)
+print(newNum)
 
+# [4, 8, 9, 12, 15]
 
+newNum2 = sorted(num, reverse = True)
+print(newNum2)
+
+# [15, 12, 9, 8, 4]
+```
+
+### lambda() 함수
+
+- 다중 리스트나, 다중 튜플에서 여러 개의 필드값을 가지고 있다면 key(키) 값을 인자 값으로 지정하여 `lambda()` 함수 key값 옵션을 지정할 수 있다.
+- `key = lambda x:x[0]`의 의미는 다중 리스트에서 key값 0번째 인자에 값을 지정하여 정렬을 한다.
+- `key = lambda`함수는 1차 리스트에서는 많이 사용하지 않지만, 만약 `lambda()` 함수를 1차원에서 사용하고자 한다면 인자에 대한 key값 기준은 무조건 `key = lambda x:x[0]`로 지정한다.
+
+![IMG_2C7A56369AF0-1](https://github.com/hampak/python-study/assets/85291626/5c173bdd-32a8-4a99-a6e5-1cad3936356b)
+
+다음을 살펴보자:
+
+![IMG_69BF64A737CD-1](https://github.com/hampak/python-study/assets/85291626/945c885c-d742-44d8-92a9-211484b40fb0)
+
+### 다중 리스트 구조
+
+- 1차원 리스트 구조는 행으로만 구성된 것 구조
+- 2차원 리스트 구조는 행과 열로 구성된 리스트 구조
+
+![IMG_5A42C6FF1C5A-1](https://github.com/hampak/python-study/assets/85291626/f09ab8fc-e9bb-4f11-b5bc-a346d45fcc85)
+
+2차원 리스트에 접근하는 방식은 이렇게 하면 된다:
+
+```py
+리스트[행][열] = 값
+```
+
+### 간단한 연습
+
+> for 반복문을 이용하여 다중 리스트를 출력해보자
+
+```py
+numList = [[10, 20], [30, 40], [10, 100]]
+
+for i, j in numList:
+  print(i, j)
+
+# 10 20
+# 30 40
+# 10 100
+`
+
+> 이번에는 외부 for, 내부 for 중첩반복문을 이용하여 다중 리스트를 출력해 보자.
+
+```py
+numList = [[10, 20], [30, 40], [10, 100]]
+
+for i in numList:
+  for j in i:
+    print(j, end=" ")
+  print()
+
+# 10 20
+# 30 40
+# 10 100
+`
+
+> 다중 리스트 튜플에서 여러 개의 필드 값을 가지고 있다면 key 값의 위치를 `lambda()` 함수 키 인자 값(도서대금)을 내림차순으로 지정하여 출력해보자.
+
+```py
+book = [("Java", 15000), ("Python", 25000), ("C", 18000), ("Java", 19000)]
+
+newBook = sorted(book, key = lambda x:x[1], reverse = True)
+
+for i, j in newBook:
+  print("{} \t{}".format(i, j))
+
+# Python  25000
+# Java    19000
+# C       18000
+# Java    15000
+```
+
+## 딕셔너리(dictionary)
 
 
 
