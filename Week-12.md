@@ -307,11 +307,99 @@ print(chr(97))
 # "a"
 ```
 
+이와 반대로, 영문자의 해당되는 아스키코드를 알기 위해선 `ord(x)` 함수를 사용한다.
 
+```py
+print(ord("A"))
+print(ord("z"))
 
+# 65
+# 122
+```
 
+### 문자열 검색하여 위치 값 찾기: `find()`, `index()`
 
+`find()` 함수는 문자열 안에서 찾고 싶은 문자가 몇 번째에 있는지 착고 싶을 때 사용하는 함수이다.
 
+```py
+str = "python programming"
 
+print(str.find("p"))
 
+# 0
+```
 
+- `index()` 함수를 사용하면 쉽게 문자열 위치를 찾을 수 있다.
+- 중복된 문자 값ㅇ 있다면 앞에 있는 문자 위치가 먼저 리턴하게 한다.
+
+```py
+str = "python programming"
+
+print(str.index("o"))
+print(str.index("o", 7, 18)) # 7번째 부터 18번 마지막 문자까지 검색
+
+# 4
+# 9
+```
+
+### 문자열 변환하기: `replace(old, new)`, `capitalize()`
+
+`replace(old, new)` 함수는 `old` 문자열을 `new` 문자열로 변환하는 함수이다.
+
+```py
+str = "python programming is the best!"
+
+print(str.replace("python", "javascript"))
+
+# javascript programming is the best!
+```
+
+`capitalize()` 함수는 **첫 글자만** 대문자로 변환하는 함수이다.
+
+```py
+str = "javascript programming is the best!"
+
+print(str.capitalize())
+
+# Javascript programming is the best!
+```
+
+`upper()` 함수는 문자열을 모두 대문자로 변환해주고 `lower()` 함수는 그 반대로 문자를 모두 소문자로 변환한다.
+
+```py
+str = "Javascript Programming is the best!"
+
+print(str.upper())
+print(str.lower())
+
+# JAVASCRIPT PROGRAMMING IS THE BEST!
+# javascript programming is the best!
+```
+
+### 간단한 실습
+
+> 사용자로 부터 시작 문자, 끝 문자를 입력받아 다음과 같이 알파벳을 출력하는 프로그램을 작성하시오.
+
+```py
+시작 문자: A
+끝 문자: Z
+
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+시작 문자: a
+끝 문자: z
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+```
+
+```py
+startStr = input("시작 문자: ")
+endStr = input("시작 문자: ")
+
+for i in range(ord(startStr), ord(endStr)+ 1, 1):
+  print(chr(i), end = " ")
+
+# 시작 문자: A
+# 시작 문자: Z
+# A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+```
