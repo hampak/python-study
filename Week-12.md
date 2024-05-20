@@ -46,6 +46,76 @@ multiply()
 # 5 * 9 = 45
 ```
 
+## 인자와 매개변수
+
+- **인자(argument)**란 함수 호출 시 데이터와 함께 함수를 호출할 수 있는데 이 때 사용되는 데이터 값을 인자라고 한다.
+- **매개변수(parameter)**란 함수 정의 프로그램에서 전달받은 값으로, 호출 당시 인자 순서대로 차례로 매개변수로 넘겨진다.
+
+```py
+def nameOfFunction(parameter1, parameter2):
+  #
+
+nameOfFunction(argument1, argument2)
+```
+
+매개변수와 인자를 이해하기 위해 간단한 코드를 짜보자:
+
+```py
+def sum(num1, num2):
+  print("{} + {} = {}".format(num1, num2, num1 + num2))
+
+a = 10
+b = 20
+sum(a, b)
+# sum(a = 10, b = 20) 도 가능
+
+# 10 + 20 = 30
+```
+
+인자값을 리스트 자체로도 넘길 수 있다:
+
+```py
+def sumOfList(list):
+  sum = 0
+  for i in list:
+    print(i)
+    sum += i
+  print("합 = {}".format(sum))
+
+l = [1, 2, 3, 4, 5]
+sumOfList(l)
+
+# 1
+# 2
+# 3
+# 4
+# 5
+# 합 = 15
+```
+
+### 간단한 실습
+
+> 함수 호출 영역에서 팩토리얼 값을 입력 받아 인자 값으로 함수를 호출한다. 함수 정의 영역에서 팩토리얼 값을 구한 후, 결과 값을 반환하여 다음과 같이 출력되도록 코드를 작성하라
+
+```
+어떤 숫자: 5
+5! = 120
+```
+
+```py
+def factorial(n):
+  sum = 1
+  for i in range(5, 0, -1):
+    sum *= i
+  return sum
+
+num = int(input("어떤 숫자: "))
+result = factorial(num)
+print("{}! = {}".format(num, result))
+
+# 어떤 숫자: 5
+# 5! = 120
+```
 
 
 
