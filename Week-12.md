@@ -121,6 +121,63 @@ print("{}! = {}".format(num, result))
 
 ## 내장함수
 
+파이썬 내장함수란, 파이썬을 설치하게 되면, 파이썬에 처음부터 포함이 되어 있어서 기본적으로 사용할 수 있는 함수이다. 또한, 내장함수는 `import` 선언 없이 바로 사용이 가능하다.
+
+![IMG_242A7CF580F6-1](https://github.com/hampak/python-study/assets/85291626/eb61fac3-c75c-4527-9583-d5a5f2052c16)
+
+
+### 내장함수: 수학함수 `math()`
+
+- 수학함수를 사용을 위해 `import math`를 포함해야 한다.
+- 수학 함수들은 소수 첫째자리에서 연산을 수행한다.
+
+  
+`ceil(x)` 함수는 무조건 올려서 출력하는 함수이다.
+
+```py
+import math
+
+x = 2.487
+y = -2.1345
+
+print(math.ceil(x))
+print(math.ceil(y))
+
+# 3
+# -2
+```
+
+`floor(x)` 함수는 무조건 내려서 출력하는 함수이다.
+
+```py
+import math
+
+x = 2.487
+y = -2.1345
+
+print(math.floor(x))
+print(math.floor(y))
+
+# 2
+# -3
+```
+
+`trunc(x)` 함수는 무조건 절삭시키는 함수이다.
+
+```py
+import math
+
+x = 2.487
+y = -2.1345
+
+print(math.trunc(x))
+print(math.trunc(y))
+
+# 2
+# -2
+```
+
+
 
 
 
